@@ -1,8 +1,12 @@
 <?php
-  include 'includes/db.php';
+  $title = "Logga in!";
+  $bodyID = "login";
+  include 'includes/header.php';
   session_start();
 
-  $title = "Logga in!";
+  $errorMessage = '';
+  $db_username = '';
+  $db_password = '';
 
   if (isset($_POST['login'])) {
     $username = $_POST['username'];
@@ -10,9 +14,6 @@
 
     $username = mysqli_real_escape_string($connection, $username);
     $password = mysqli_real_escape_string($connection, $password);
-
-
-
 
     $query = "SELECT * FROM users WHERE username = '{$username}' ";
     $select_user_query = mysqli_query($connection, $query);
@@ -30,14 +31,14 @@
     $password = crypt($password, $db_password);
 
     if ($username === $db_username && $password === $db_password) {
+      $_SESSION['id'] = $db_id;
       $_SESSION['username'] = $db_username;
       header("Location: index.php");
     }
     else {
-      header("Location: login.php");
+      $errorMessage = "Fel användarnamn eller lösenord!";
     }
   }
-  include 'includes/header.php'
 ?>
   <form class="animated fadeInDownBig login" action="login.php" method="post">
     <h3>Logga in</h3>
@@ -46,6 +47,13 @@
     <input class ="submit" type="submit" name="login" value="Logga in">
     <a href="register.php">Ny användare? Registrera dig här</a>
   </form>
+
+  <?php if($errorMessage) : ?>
+    <div id="alert" class="animated shake">
+      <?php echo $errorMessage; ?>
+    </div>
+  <?php endif; ?>
+
 
 </body>
 </html>

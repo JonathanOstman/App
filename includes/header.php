@@ -1,3 +1,9 @@
+<?php
+  include "db.php";
+  include "functions.php"
+
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,4 +12,4 @@
 <link rel="stylesheet" href="css/animate.css">
 <link rel="stylesheet" href="css/app.css">
 </head>
-<body>
+<body id="<?php echo $bodyID ?>">
