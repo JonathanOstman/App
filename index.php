@@ -17,11 +17,12 @@
   </nav>
 
   <section>
+    <h2>Att göra:</h2>
     <ul>
-      <li>Betal räkninga</li>
-      <li>Fa ut me hundn</li>
-      <li>Fa ti pallenas</li>
-      <li>Bäntzi olympics</li>
+      <?php
+        getTask();
+
+      ?>
     </ul>
     <form action="index.php" method="post">
       <input type="text" name="taskName">
