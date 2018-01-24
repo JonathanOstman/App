@@ -14,7 +14,7 @@ body {
   margin: 0;
   font-family: Roboto;
 }
-#login, #register {
+#login, #register, #edit, #delete {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,8 +120,24 @@ section {
   width: 320px;
   background: #fff;
   font-weight: 600;
+  line-height: 30px;
 }
 section h2 {
   margin: 0 auto;
   text-align: center;
 }
+section ul li a {
+  float: right;
+  text-decoration: none;
+  margin: 0 4px;
+}
+.delete {
+  cursor: pointer;
+}
+.deleteIcon {
+  color: #e74c3c;
+}
+.editIcon{
+  color: #3498db;
+}
+

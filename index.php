@@ -8,9 +8,9 @@
   if(isset($_POST['addTask'])) {
     addTask();
   }
-?>
 
-<?php if($_SESSION['username']) : ?>
+
+ if($_SESSION['username']) : ?>
   <nav>
     <a href="logout.php">Logga ut <?php echo $_SESSION['username']; ?></a>
     <h1>App</h1>
@@ -21,11 +21,10 @@
     <ul>
       <?php
         getTask();
-
       ?>
     </ul>
     <form action="index.php" method="post">
-      <input type="text" name="taskName">
+      <input type="text" name="taskName" placeholder="Ny uppgift">
       <input type="submit" name="addTask" value="Lägg till">
     </form>
   </section>

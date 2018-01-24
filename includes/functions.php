@@ -30,14 +30,19 @@
     global $connection;
 
     $userID = $_SESSION['id'];
-    
-    $query = "SELECT title FROM tasks WHERE user_id = $userID";
 
+    $query = "SELECT * FROM tasks WHERE user_id = $userID";
     $result = mysqli_query($connection, $query);
 
-    while ($row = mysqli_fetch_array($result)) {
-      echo "<li>" . $row['title'] . "</li>";
-    }
+    while($row = mysqli_fetch_array($result)) : ?>
+    <?php $taskName = $row['title']; ?>
+      <li>
+        <?php echo $row['title']; ?>
+        <a class="deleteIcon" href="delete.php?taskID=<?php echo $row['id']; ?>"><i class="far fa-trash-alt"></i></a>
+        <a class="editIcon" href="edit.php?taskID=<?php echo $row['id']; ?>&taskName=<?php echo $taskName; ?>"><i class="far fa-edit"></i></a>
+      </li>
+
+  <?php endwhile;
   }
 
 ?>
