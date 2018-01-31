@@ -1,143 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300');
-* {
-  box-sizing: border-box;
-}
-html {
-  background: #141E30;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
+/* Layout */
 html, body {
   height: 100%;
 }
-body {
-  margin: 0;
-  font-family: Roboto;
-}
-#login, #register, #edit, #delete {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-header {
+/* Layout END*/
+
+/* Landing page */
+video {
+  object-fit: cover;
+  bottom: 0;
+  height: 100vh;
+  width: 100%;
   position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   top: 0;
-  width: 100%;
-  flex-direction: row;
-  background: #fff;
-  height: 50px;
-  line-height: 50px;
-
+  z-index: -1;
 }
-header a {
-  color: #000;
-  flex-direction: row;
-  margin-right: 60px;
-  font-size: 20px;
-  float: right;
-}
-.login {
-  width: 420px;
-  background: rgba(255, 255, 255, 0.75);
-  padding: 30px 40px;
-  border-radius: 5px;
-  text-align: center;
-}
-.login input {
-  display: block;
-  width: 100%;
-  line-height: 40px;
-  margin: 10px auto 0;
-  padding: 0 20px;
-}
-.login a {
-  display: block;
-  color: #000;
-  font-size: 16px;
-  margin-top: 20px;
-}
-.submit {
-  border-radius: 3px;
-  background: #e74c3c;
-  border: none;
-  cursor: pointer;
-  font-size: 15px;
-  transition: background-color .25s ease;
-}
-.submit:hover {
-  background-color: #c0392b;
-}
-.welcome {
-  font-size: 70px;
-  color: #e74c3c;
-  margin: 0;
-  padding: 0;
-}
-#alert {
-  margin-top: 15px;
-  color: #fff;
-  font-size: 18px;
-  background: #e74c3c;
-  padding: 10px;
-  border-radius: 3px;
-  width: 320px;
-  text-align: center;
-}
-nav {
-  background: #242424;
-  height: 80px;
-  line-height: 80px;
-  color: #fff;
-  padding: 0 20px;
-  position: relative;
-}
-/* Logo */
-nav h1 {
-  margin: 0 auto;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-nav a {
-  float: right;
-  color: #fff;
-  background: #242424;
-  padding: 0 10px 0 10px;
-  text-decoration: none;
-  transition: .25s ease;
-}
-nav a:hover {
-  color: #242424;
-  background: #fff;
-}
-section {
-  color: #242424;
-  margin: 100px auto 0;
-  padding: 20px;
-  width: 320px;
-  background: #fff;
-  font-weight: 600;
-  line-height: 30px;
-}
-section h2 {
-  margin: 0 auto;
-  text-align: center;
-}
-section ul li a {
-  float: right;
-  text-decoration: none;
-  margin: 0 4px;
-}
-.delete {
-  cursor: pointer;
-}
-.deleteIcon {
-  color: #e74c3c;
-}
-.editIcon{
-  color: #3498db;
-}
-
+/* Landing page END */

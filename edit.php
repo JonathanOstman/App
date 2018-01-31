@@ -14,7 +14,7 @@
     $taskTitle = $_POST['edit'];
     $query = "UPDATE tasks SET title = '$taskTitle' WHERE id = $taskID ";
     $updateTaskQuery = mysqli_query($connection, $query);
-    header("Location: index.php");
+    header("Location: admin.php");
   }
 ?>
 

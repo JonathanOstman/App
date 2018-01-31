@@ -11,11 +11,11 @@
     $taskID = $_POST['taskID'];
     $query = "DELETE FROM tasks WHERE id = $taskID";
     $deleteTaskQuery = mysqli_query($connection, $query);
-    header("Location: index.php");
+    header("Location: admin.php");
   }
 ?>
 
-  
+
   <form action="delete.php" method="post">
     <input type="hidden" name="taskID" value="<?php echo $taskID; ?>">
     <h2>Är du säker på att du vill radera detta inlägg</h2>
