@@ -1,36 +1,34 @@
 <?php
   session_start();
 
-  $title = "Välkommen";
-  $bodyID = "index";
   include 'includes/header.php';
 
   if(isset($_POST['addTask'])) {
     addTask();
   }
+?>
+<?php if(isset($_SESSION['username'])) : ?>
+  <?php include "includes/navigation.php" ?>
 
-
- if($_SESSION['username']) : ?>
-  <nav>
-    <a href="logout.php">Logga ut <?php echo $_SESSION['username']; ?></a>
-    <h1>App</h1>
-  </nav>
-
-  <section>
-    <h2>Att göra:</h2>
-    <ul>
-      <?php
-        getTask();
-      ?>
-    </ul>
-    <form action="index.php" method="post">
-      <input type="text" name="taskName" placeholder="Ny uppgift">
-      <input type="submit" name="addTask" value="Lägg till">
-    </form>
-  </section>
+  <div class="container-fluid">
+    <div class="row">
+      <?php include "includes/tasks.php" ?>
+    </div>
+  </div>
 <?php else : ?>
-  <?php header("Location: login.php"); ?>
+  <div class="container-fluid">
+    <div class="row">
+
+      <div id="forbidden" class="animated shake">
+        <h1>&#9760;</h1>
+        <p>Du har inte tillgång till den här sidan!</p>
+
+      </div>
+
+    </div>
+  </div>
 
 <?php endif;
-  include "includes/footer.php";
+include "includes/footer.php";
 ?>
+

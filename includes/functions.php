@@ -48,4 +48,28 @@
   <?php endwhile;
   }
 
+  function countUsers() {
+    global $connection;
+
+    $query = "SELECT COUNT('user_id') FROM users";
+    $result = mysqli_query($connection, $query);
+    $rows = mysqli_fetch_row($result);
+    echo $rows[0];
+  }
+  function fixUsernameInTitle() {
+    global $title;
+    if (isset($_SESSION['username'])) {
+      $username = $_SESSION['username'];
+      if (strlen($username) > 0) {
+        if ($username[strlen($username) - 1] !== 's') {
+          $title = $username . 's' . ' uppgifter';
+        }
+        else {
+          $title = $username . ' uppgifter';
+        }
+      }
+    }
+  }
+
+
 ?>
