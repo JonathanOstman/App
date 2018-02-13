@@ -1,6 +1,6 @@
 <?php
   $title = "Registrera";
-  $bodyID = "register";
+  $bodyClass = "register";
   include 'includes/header.php';
   $errorMessage = '';
 
@@ -36,18 +36,21 @@
     }
   }
 ?>
-  <form class="animated fadeInDownBig login" action="register.php" method="post">
-    <h3>Registrera</h3>
-    <input type="text" name="username" placeholder="Användarnamn" required autofocus>
-    <input type="password" name="password" placeholder="Lösenord" required>
-    <input class ="submit" type="submit" name="register" value="Registrera">
-  </form>
-
+<form class="col-12 col-sm-8 col-lg-3 userForms animated fadeInDownBig" action="register.php" method="post">
+  <img src="to-do-logo.svg" class="img-fluid">
   <?php if($errorMessage) : ?>
-    <div id="alert" class="animated shake">
+    <div class="col alert alert-danger animated shake" class="animated shake">
       <?php echo $errorMessage; ?>
     </div>
   <?php endif; ?>
+  <div class="form-group">
+    <input type="text" class="form-control" name="username" placeholder="Användarnamn" required>
+  </div>
+  <div class="form-group">
+    <input type="password" class="form-control" name="password" placeholder="Lösenord" required>
+  </div>
+  <button name="register" type="submit" class="col-12 btn btn-outline-light">Registrera</button>
+  <a href="register.php">Ny användare? Registrera dig här</a>
+</form>
 
-</body>
-</html>
+<?php include "includes/footer.php" ?>

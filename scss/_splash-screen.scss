@@ -1,0 +1,52 @@
+#splashScreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $black;
+  flex-direction: column;
+  z-index: 2;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  &:before {
+    animation: splashScreenAnimation 2.5s both;
+    background: url(../to-do-logo.svg) no-repeat center;
+    content: '';
+    display: block;
+    width: 33.3333333%;
+    height: 33.3333333%;
+    background-size: contain;
+  }
+  blockquote {
+    color: $clouds;
+    margin: 0;
+    font-family: Ubuntu;
+    p {
+      margin: 0;
+      font-size: 24px;
+      &:before{
+        content: '“';
+        margin: 0 5px 0 0;
+      }
+      &:after {
+        content: '”';
+        margin: 0 0 0 5px;
+      }
+      &:before, &:after {
+        display: inline-block;
+      }
+    }
+    footer {
+      font-size: 14px;
+      float: right;
+      opacity: .75;
+      &:before {
+        content: '—';
+        margin: 0 5px 0 0;
+      }
+    }
+  }
+
+}

@@ -1,6 +1,8 @@
 <?php
 
-  $appName = "To-Do";
+  function appName() {
+    return "To-Do";
+  }
 
   function usernameExists($username) {
     global $connection;
@@ -54,7 +56,7 @@
     $query = "SELECT COUNT('user_id') FROM users";
     $result = mysqli_query($connection, $query);
     $rows = mysqli_fetch_row($result);
-    echo $rows[0];
+    return $rows[0];
   }
   function fixUsernameInTitle() {
     global $title;

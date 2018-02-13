@@ -1,0 +1,39 @@
+main {
+  p {
+    margin: 20px auto;
+    font-size: 24px;
+    color: $clouds;
+    font-family: Ubuntu;
+    text-shadow: rgba(0, 0, 0, .25);
+    font-weight: 400;
+    span {
+      color: $green;
+      font-weight: bold;
+    }
+  }
+  a {
+    :first-of-type {
+      margin: 0 10px 0 0;
+    }
+  }
+  button {
+    color: $clouds;
+    border: 1px solid $blue;
+    &:hover {
+      background: $clouds;
+      color: $blue;
+    }
+  }
+}
+video {
+  object-fit: cover;
+  bottom: 0;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}

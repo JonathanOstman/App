@@ -1,0 +1,15 @@
+@keyframes splashScreenAnimation {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  75% {
+    opacity: 1;
+    transform: none;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+}

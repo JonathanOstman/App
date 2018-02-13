@@ -1,20 +1,18 @@
 $(document).ready(function() {
-  if (sessionStorage.getItem('splashScreen') !== 'true';)
-  var quote = "You cannot shake hands with a clenched fist";
-  var author = "Indira Gandhi";
+  if (sessionStorage.getItem('splashScreen') !== 'true') {
 
   var quotes = [
     {
-      quote: "Citat 1",
-      author: "Author 1"
+      quote: "You cannot shake hands with a clenched fist",
+      author: "Indira Gandhi"
     },
     {
-      quote: "Citat 2",
-      author: "Author 2"
+      quote: "The best preperation for tomorrow is doing your best today",
+      author: "H.Jackson Brown,Jr."
     },
     {
-      quote: "Citat 3",
-      author: "Author 3"
+      quote: "Not all those who wander are lost",
+      author: "J.R.R. Tolkien"
     }
   ];
   var randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
@@ -27,4 +25,4 @@ $(document).ready(function() {
   $('#author').html(randomQuote.author);
   $('#splashScreen').show().delay(2500).fadeOut();
   sessionStorage.setItem('splashScreen', 'true');
-})
+}})

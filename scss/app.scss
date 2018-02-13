@@ -1,168 +1,36 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+// Color palette
 @import "colors";
+
+// Components
+@import "components";
+
 // Layout
-html, body {
-  height: 100%;
-}
-body {
-  background: #232526;
-  background: -webkit-linear-gradient(to top, #414345, #232526);
-  background: linear-gradient(to top, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-// Layout END
+@import "layout";
 
 // Splash screen
-#splashScreen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #000;
-//  background: radial-gradient(#414345, #232526);
-//  background: -o-radial-gradient(#414345, #232526);
-//  background: -webkit-radial-gradient(#414345, #232526);
-  flex-direction: column;
-  z-index: 2;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  &:before {
-    animation: splashScreenAnimation 2.5s both;
-    background: url(../to-do-logo.svg) no-repeat center;
-    content: '';
-    display: block;
-    width: 33.3333333%;
-    height: 33.3333333%;
-    background-size: contain;
-  }
-  blockquote {
-    color: $clouds;
-    margin: 0;
-    font-family: Ubuntu;
-    p {
-      margin: 0;
-      font-size: 24px;
-      &:before{
-        content: '“';
-        margin: 0 5px 0 0;
-      }
-      &:after {
-        content: '”';
-        margin: 0 0 0 5px;
-      }
-      &:before, &:after {
-        display: inline-block;
-      }
-    }
-    footer {
-      font-size: 14px;
-      float: right;
-      opacity: .75;
-      &:before {
-        content: '—';
-        margin: 0 5px 0 0;
-      }
-    }
-  }
-
-}
-// Splash screen end
+@import "splash-screen";
 
 // Landing page
-main {
-  p {
-    margin-top: 20px;
-    font-size: 24px;
-    color: $white;
-    font-family: Ubuntu;
-    span {
-      color: #00C9FF;
-      font-weight: bold;
-    }
-  }
-  button {
-    background: $blue;
-    color: $white;
-    &:hover {
-      background: $white;
-      color: $blue;
-    }
-  }
-  img {
-    margin: 0 auto 40px;
-  }
-}
-video {
-  object-fit: cover;
-  bottom: 0;
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: -1;
-}
-// Landing page END
+@import "landing-page";
+
+// Login page
+@import "login";
+
+// Register page
+@import "register";
 
 // Navigation
-.navbar-brand {
-  img {
-    height: auto;
-    width: 75px;
-  }
-}
-// Navigation END
+@import "navigation";
 
 // Tasks
-#tasks {
-  background: $white;
-  border-radius: 6px;
-  margin: 40px auto 0;
-  padding: 20px;
-  text-align: center;
-  h2 {
-    display: inline-block;
-    font-family: Ubuntu;
-    margin: 0 auto 20px;
-    border-bottom: 1px solid #00C9FF;
-    padding: 0 20px 5px;
-  }
-}
-// Tasks END
+@import "tasks";
 
 // Forbidden page
-#forbidden {
-  margin: 150px auto 0;
-  text-align: center;
-  h1 {
-    font-size: 127px;
-    margin: 0 auto 20px;
-  }
-  p {
-    color: #e15f41;
-    font-family: Ubuntu;
-    font-size: 32px;
-  }
-}
+@import "forbidden-page";
 
 // Animations
-@keyframes splashScreenAnimation {
-  from {
-    opacity: 0;
-    transform: translate3d(0, -100%, 0);
-  }
-  75% {
-    opacity: 1;
-    transform: none;
-  }
-  to {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
+@import "animations";
 
-}
-// Animation END
+
 

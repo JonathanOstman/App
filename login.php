@@ -1,6 +1,6 @@
 <?php
   $title = "Logga in!";
-  $bodyID = "login";
+  $bodyClass = "login";
   include 'includes/header.php';
   session_start();
 
@@ -40,20 +40,21 @@
     }
   }
 ?>
-  <form class="animated fadeInDownBig login" action="login.php" method="post">
-    <h3>Logga in</h3>
-    <input type="text" name="username" placeholder="Användarnamn" required autofocus>
-    <input type="password" name="password" placeholder="Lösenord" required>
-    <input class ="submit" type="submit" name="login" value="Logga in">
+  <form class="col-12 col-sm-8 col-lg-3 userForms animated fadeInDownBig" action="login.php" method="post">
+    <img src="to-do-logo.svg" class="img-fluid">
+    <?php if($errorMessage) : ?>
+      <div class="col alert alert-danger animated shake" class="animated shake">
+        <?php echo $errorMessage; ?>
+      </div>
+    <?php endif; ?>
+    <div class="form-group">
+      <input type="text" class="form-control" name="username" placeholder="Användarnamn" required>
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" name="password" placeholder="Lösenord" required>
+    </div>
+    <button name="login" type="submit" class="col-12 btn btn-outline-light">Logga in</button>
     <a href="register.php">Ny användare? Registrera dig här</a>
   </form>
 
-  <?php if($errorMessage) : ?>
-    <div id="alert" class="animated shake">
-      <?php echo $errorMessage; ?>
-    </div>
-  <?php endif; ?>
-
-
-</body>
-</html>
+<?php include "includes/footer.php" ?>

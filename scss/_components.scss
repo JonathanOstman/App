@@ -1,0 +1,29 @@
+.userForms {
+  flex: none;
+}
+.btn-outline-light {
+  border-color: $clouds;
+  color: $clouds;
+  :hover {
+    background-color: $clouds;
+  }
+}
+.form-control {
+  background: transparent;
+  border-color: $clouds;
+  color: $clouds;
+}
+.form-control:focus {
+  color: $clouds;
+  background-color: transparent;
+  border-color: $clouds;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+.alert-danger {
+  background-color: $red;
+  color: $black;
+  border-color: transparent;
+  margin: 10px auto;
+}
+

@@ -1,0 +1,18 @@
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  h3 {
+    color: $clouds;
+  }
+  a {
+    display: inline-block;
+    color: $clouds;
+    margin: 10px auto;
+  }
+  img {
+    margin-bottom: 20px;
+  }
+}
