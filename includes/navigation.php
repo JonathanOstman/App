@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
   <a class="navbar-brand" href="admin.php">
     <img src="to-do-logo.svg" alt="To-Do">
   </a>
@@ -11,6 +11,7 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Konto</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="settings.php">Inställningar</a>
           <a class="dropdown-item" href="logout.php">Logga ut <?php echo $_SESSION['username']; ?></a>
         </div>
       </li>

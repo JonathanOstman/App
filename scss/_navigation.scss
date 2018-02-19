@@ -1,6 +1,10 @@
-.navbar-brand {
-  img {
-    height: auto;
-    width: 75px;
+.navbar {
+  border-bottom: 3px solid $clouds;
+  .navbar-brand {
+    img {
+      height: auto;
+      width: 75px;
+    }
   }
+
 }

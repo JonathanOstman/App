@@ -8,7 +8,19 @@
     display: inline-block;
     font-family: Ubuntu;
     margin: 0 auto 20px;
-    border-bottom: 1px solid #00C9FF;
+    border-bottom: 1px solid $blue;
     padding: 0 20px 5px;
+  }
+  .fa-edit {
+    color: $blue;
+  }
+  .fa-trash-alt {
+    color: $red;
+  }
+  form {
+    :first-of-type {
+      border-color: $blue;
+      color: $black;
+    }
   }
 }

@@ -4,8 +4,17 @@
 .btn-outline-light {
   border-color: $clouds;
   color: $clouds;
-  :hover {
+  &:hover {
     background-color: $clouds;
+  }
+}
+.btn-outline-success {
+  color: $green;
+  border-color: $green;
+  &:hover {
+    color: $clouds;
+    border-color: $green;
+    background-color: $green;
   }
 }
 .form-control {
@@ -26,4 +35,22 @@
   border-color: transparent;
   margin: 10px auto;
 }
-
+.alert-success {
+  background-color: $green;
+  color: $clouds;
+  border-color: transparent;
+  margin: 10px auto;
+}
+.navbar-light {
+  .navbar-nav {
+    .nav-link {
+      color: $clouds;
+      &:hover {
+        color: $clouds;
+      }
+      &:focus {
+        color: $clouds;
+      }
+    }
+  }
+}

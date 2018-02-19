@@ -9,8 +9,8 @@
 
         <li>
           <?php echo $row['title']; ?>
-          <a href="edit.php?taskID=<?php echo $row['id']; ?>&taskName=<?php echo $row['title']; ?>">Edit</a>
-          <a href="delete.php?taskID=<?php echo $row['id']; ?>">X</a>
+          <a href="edit.php?taskID=<?php echo $row['id']; ?>&taskName=<?php echo $row['title']; ?>"><i class="far fa-edit"></i></a>
+          <a href="delete.php?taskID=<?php echo $row['id']; ?>"><i class="fas fa-trash-alt"></i></a>
         </li>
 
     <?php endwhile; ?>

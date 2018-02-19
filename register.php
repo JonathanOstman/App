@@ -7,33 +7,8 @@
   session_start();
 
   if (isset($_POST['register'])) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    if(usernameExists($username)) {
-      $errorMessage = "Användarnamnet finns redan";
-    }
-    else {
-      $username = mysqli_real_escape_string($connection, $username);
-      $password = mysqli_real_escape_string($connection, $password);
-
-      $hashFormat = '$2y$10$';
-      $salt = 'sa2ravmM5Rqq2VLs68RA3R';
-
-      $hashAndSalt = $hashFormat . $salt;
-
-      $password = crypt($password, $hashAndSalt);
-
-      $query = 'INSERT INTO users(username, password)';
-      $query .= "VALUES ('$username', '$password')";
-
-      $result = mysqli_query($connection, $query);
-      if (!$result) {
-        die("Query failed") . mysqli_error($connection);
-      }
-
-      header('Location: login.php');
-    }
+    registerUser();
+    $errorMessage = registerUser();
   }
 ?>
 <form class="col-12 col-sm-8 col-lg-3 userForms animated fadeInDownBig" action="register.php" method="post">
@@ -50,7 +25,7 @@
     <input type="password" class="form-control" name="password" placeholder="Lösenord" required>
   </div>
   <button name="register" type="submit" class="col-12 btn btn-outline-light">Registrera</button>
-  <a href="register.php">Ny användare? Registrera dig här</a>
+  <a href="login.php">Redan användare? Logga in här</a>
 </form>
 
 <?php include "includes/footer.php" ?>

@@ -12,7 +12,8 @@
 
   <div class="container-fluid">
     <div class="row">
-      <?php include "includes/tasks.php" ?>
+      <?php include "includes/profile.php" ?>
+      <?php //include "includes/tasks.php" ?>
     </div>
   </div>
 <?php else : ?>
